@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Life Productivity – To-Do List App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="loginScreen" class="card">
+    <h2>Life Productivity</h2>
+    <input id="username" type="text" placeholder="Username">
+    <input id="password" type="password" placeholder="Password">
+    <div class="btns">
+      <button id="loginBtn">Login</button>
+      <button id="signupBtn" class="outline">Create Account</button>
+    </div>
+    <p class="hint">All data is stored locally in your browser.</p>
+  </div>
+
+  <div id="app" style="display:none;">
+    <header>
+      <h1>Life Productivity</h1>
+      <div class="controls">
+        <select id="sectionSelect">
+          <option>Personal</option>
+          <option>Home</option>
+          <option>School</option>
+          <option>Work</option>
+        </select>
+        <button id="newTaskBtn">+ Task</button>
+        <button id="toggleThemeBtn">🌗</button>
+        <button id="logoutBtn">Logout</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="progress-container">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+
+      <ul id="taskList"></ul>
+
+      <h3>Task History</h3>
+      <ul id="taskHistory"></ul>
+    </main>
+  </div>
+
+  <div id="modal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <h3 id="modalTitle">Add Task</h3>
+      <input id="taskTitle" type="text" placeholder="Task Title">
+      <input id="taskDue" type="datetime-local">
+      <div class="btns">
+        <button id="saveTaskBtn">Save</button>
+        <button id="cancelBtn" class="outline">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
